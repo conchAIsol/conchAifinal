@@ -33,7 +33,7 @@
 
         // Make function explicitly global
         var msgRef;
-        socket = new WebSocket('ws://conchai.onrender.com/ws')
+        socket = new WebSocket('wss://conchai.onrender.com/ws')
         socket.onopen = function(event){
             console.log('socket connected')
 
@@ -44,7 +44,7 @@
                 }
             });
         }
-        window.handleSend = async function() {
+        handleSend = async function() {
             if(disabled == false && document.getElementById('userinput').value != ''){
                 
             disabled = true;
